@@ -6,14 +6,14 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class ApiService {
 
-private apiRoot = 'http://localhost:8000/';
+private apiRoot = 'https://guilhermerodrigues680.pythonanywhere.com/';
 
   constructor(
     private http: HttpClient,
   ) { }
 
   getDados() {
-    return this.http.get(this.apiRoot.concat('shopping-item/'));
+    return this.http.get(this.apiRoot.concat('registro/'));
   }
 
 }
