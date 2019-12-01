@@ -1,6 +1,5 @@
-interface Registro {
-  id:number;
-  horario:Date;
-  velocidade:number;
-  updated_on:Date;
+export interface Registro {
+  logradouro:string;
+  bairro:string;
+  localidade:string;
 }

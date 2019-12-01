@@ -1,2 +1,20 @@
-<h1>{{ name }}</h1>
-<p>Start editing to see some magic happen :)</p>
+<html>
+<head>
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+</head>
+<body>
+  <h1>Calculadora CEP - Guilherme</h1>
+
+  <input #numeroCep type='text' placeholder='cep' (keyup)="calculaCep(numeroCep.value)">
+  <button (click)="calculaCep(numeroCep.value)">Calcular Cep</button>
+
+  <div *ngIf="registros != undefined">
+    <p> <b>Cep: </b> {{ registros.cep }} </p>
+    <p> <b>Logradouro: </b> {{ registros.logradouro }} </p>
+    <p> <b>Complemento: </b> {{ registros.complemento }} </p>
+    <p> <b>Bairro: </b> {{ registros.bairro }} </p>
+    <p> <b>Localidade: </b> {{ registros.localidade }} </p>
+  </div>
+
+</body>
+</html>
